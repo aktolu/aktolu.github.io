@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"custom.js","sourceRoot":"../../src/js"}
+{"version":3,"sources":["custom.js"],"names":["console","table","line1","line2"],"mappings":"AAAAA,QAAAC,MAAA,CACAC,MAAA,CAAA,SACAC,MAAA,CAAA","file":"custom.js","sourceRoot":"../../src/js"}

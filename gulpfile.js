@@ -1,5 +1,3 @@
-"use strict";
-
 const gulp = require('gulp');
 
 // Load plugins
@@ -17,7 +15,7 @@ let add_sourcemaps = true;
 
 const root = path.resolve('./') + '/';
 const lib = root + 'lib/';
-const node = root + 'node_modules/';
+//const node = root + 'node_modules/';
 
 const tasks = {
 	// SCSS
@@ -157,8 +155,8 @@ function scss(src_file, dst_path){
 	}
 	
 	if (!add_sourcemaps) {
-		const split = src_file.split(/\\|\//);
-		const dst_map = dst_path.replace(/(\\|\/)$/, '') + '/' + split[split.length - 1].replace(/\.s(c|a)ss$/, '.css') + '.map';
+		const split = src_file.split(/[\\\/]/);
+		const dst_map = dst_path.replace(/[\/\\]$/, '') + '/' + split[split.length - 1].replace(/\.s[ca]ss$/, '.css') + '.map';
 		del(dst_map);
 	}
 	
