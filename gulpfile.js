@@ -13,7 +13,7 @@ const del = require('del');
 let production = true;
 let add_sourcemaps = true;
 
-const root = path.resolve('./') + '/';
+const root = path.resolve('./').replace(/\\/g, '/') + '/';
 const lib = root + 'lib/';
 //const node = root + 'node_modules/';
 
@@ -155,8 +155,8 @@ function scss(src_file, dst_path){
 	}
 	
 	if (!add_sourcemaps) {
-		const split = src_file.split(/[\\\/]/);
-		const dst_map = dst_path.replace(/[\/\\]$/, '') + '/' + split[split.length - 1].replace(/\.s[ca]ss$/, '.css') + '.map';
+		const split = src_file.split('/');
+		const dst_map = dst_path.replace(/\/$/, '') + '/' + split[split.length - 1].replace(/\.s[ca]ss$/, '.css') + '.map';
 		del(dst_map);
 	}
 	
