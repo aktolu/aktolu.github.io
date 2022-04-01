@@ -10,5 +10,5 @@
 git clone https://github.com/aktolu/aktolu.github.io.git
 cd aktolu.github.io
 npm install
-gulp watch # for file watcher
+gulp watch_all # for file watcher
 ```

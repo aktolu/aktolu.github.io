@@ -51,8 +51,6 @@ const tasks = {
 
 
 // ---------------- EXPORTS START ---------------- //
-// Front
-// All
 exports.watch_all = ()=>{watchTasks(tasks).forEach(item=>{gulp.watch(item.watch, gulp.task(item.task))})}
 exports.run_all = runTasks(tasks);
 
